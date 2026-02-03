@@ -1,25 +1,13 @@
----
-output: github_document
----
 
 <!-- README.md is generated from README.Rmd. Do not edit README.md directly. -->
-
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  collapse  = TRUE,
-  comment   = "#>",
-  fig.path  = "man/figures/README-",
-  out.width = "100%"
-)
-```
 
 # scBenchR
 
 scBenchR is an R package for system-aware benchmarking of Seurat v5
-single-cell RNA-seq workflows on Windows systems.
-It provides reproducible utilities to quantify runtime performance,
-parallel scaling behavior, and integration outcomes under realistic
-Windows multisession constraints.
+single-cell RNA-seq workflows on Windows systems. It provides
+reproducible utilities to quantify runtime performance, parallel scaling
+behavior, and integration outcomes under realistic Windows multisession
+constraints.
 
 The package is intended for method development, performance evaluation,
 and publication-ready reporting of scRNA-seq analyses.
@@ -35,7 +23,7 @@ Linux and HPC benchmarking are intentionally out of scope.
 
 # Workflow overview
 
-```mermaid
+``` mermaid
 flowchart TD
   A[Seurat v5 object] --> B[Quality control]
   B --> C[Step 3: Serial pipeline]
@@ -47,14 +35,14 @@ flowchart TD
 
 # Installation
 
-```{r installation, eval = FALSE}
+``` r
 # install.packages("pak")
 pak::pak("BacemDataScience/scBenchR")
 ```
 
 # Example execution
 
-```{r example}
+``` r
 library(scBenchR)
 
 timing_example <- data.frame(
@@ -63,11 +51,14 @@ timing_example <- data.frame(
 )
 
 timing_example
+#>       step elapsed_sec
+#> 1   serial         120
+#> 2 parallel          55
 ```
 
 # Typical scBenchR workflow
 
-```{r typical-workflow, eval = FALSE}
+``` r
 library(Seurat)
 library(scBenchR)
 
@@ -88,12 +79,12 @@ bench_res$markers
 
 # Outputs
 
-| Output type | Description |
-|------------|-------------|
-| Timing tables | Per-step and per-worker runtime summaries |
-| Marker tables | Cluster-wise differential expression results |
-| Scaling metrics | Serial vs parallel speedup estimates |
-| Figures | Publication-quality plots (PDF/PNG) |
+| Output type     | Description                                  |
+|-----------------|----------------------------------------------|
+| Timing tables   | Per-step and per-worker runtime summaries    |
+| Marker tables   | Cluster-wise differential expression results |
+| Scaling metrics | Serial vs parallel speedup estimates         |
+| Figures         | Publication-quality plots (PDF/PNG)          |
 
 # Windows-specific considerations
 
@@ -105,7 +96,8 @@ bench_res$markers
 
 If this package is used in academic work, please cite:
 
-Saada, B. scBenchR: System-aware benchmarking of Seurat v5 scRNA-seq workflows on Windows systems. Manuscript in preparation.
+Saada, B. scBenchR: System-aware benchmarking of Seurat v5 scRNA-seq
+workflows on Windows systems. Manuscript in preparation.
 
 # License
 
