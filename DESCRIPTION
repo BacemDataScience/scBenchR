@@ -1,28 +1,29 @@
 Package: scBenchR
-Title: Benchmarking Seurat scRNA-Seq Workflows on Windows
-Version: 0.1.0
-Depends: R (>= 4.1.0)
+Title: System-Aware Benchmarking for Seurat v5 scRNA-seq Workflows on Windows
+Version: 0.0.1
 Authors@R:
-    c(
-      person("Bacem", "Saada",
-             email = "basssoum@gmail.com",
-             role = c("aut", "cre")),
-      person("Yantai Institute of Science and Technology",
-             role = "cph")
-    )
-Description: Provides reproducible benchmarking utilities for single-cell RNA-seq
-    workflows using Seurat on Windows systems, with standardized CSV-based metric
-    aggregation and publication-ready summaries.
+    person("Bacem", "Saada",
+           email = "basssoum@gmail.com",
+           role = c("aut", "cre"))
+Description: Tools to run reproducible benchmarking of Seurat v5 scRNA-seq workflows
+    on Windows, including serial pipeline timing, marker detection benchmarking under
+    multisession execution, RPCA-based integration diagnostics, and generation of
+    paper-ready summary tables and figures.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
-OS_type: windows
+Depends:
+    R (>= 4.2.0)
 Imports:
-    dplyr,
-    readr,
-    tibble,
-    tools
+    Seurat,
+    SeuratObject,
+    data.table,
+    Matrix,
+    future,
+    future.apply
 Suggests:
-    testthat (>= 3.0.0)
-Config/testthat/edition: 3
+    ggplot2,
+    patchwork,
+    scales,
+    testthat

@@ -22,11 +22,10 @@ The goal of scBenchR is to ...
 
 ## Installation
 
-You can install the development version of scBenchR from [GitHub](https://github.com/) with:
+You can install the development version of scBenchR like so:
 
 ``` r
-# install.packages("pak")
-pak::pak("BacemDataScience/scBenchR")
+# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
 ```
 
 ## Example
