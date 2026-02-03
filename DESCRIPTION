@@ -1,6 +1,6 @@
 Package: scBenchR
 Title: System-Aware Benchmarking for Seurat v5 scRNA-seq Workflows on Windows
-Version: 0.0.1
+Version: 0.0.2
 Authors@R:
     person("Bacem", "Saada",
            email = "basssoum@gmail.com",
