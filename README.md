@@ -84,7 +84,7 @@ bench_res$markers
 |-----------------|----------------------------------------------|
 | Timing tables   | Per-step and per-worker runtime summaries    |
 | Marker tables   | Cluster-wise differential expression results |
-| Scaling metrics | Serial vs parallel speedup estimates         |
+| Scaling metrics | Runtime, speedup, parallel efficiency, runtime reduction, and variability summaries         |
 | Figures         | Publication-quality plots (PDF/PNG)          |
 
 # Windows-specific considerations
