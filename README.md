@@ -5,9 +5,7 @@
 
 scBenchR is an R package for system-aware benchmarking of Seurat v5
 single-cell RNA-seq workflows on Windows systems. It provides
-reproducible utilities to quantify runtime performance, parallel scaling
-behavior, and integration outcomes under realistic Windows multisession
-constraints.
+reproducible utilities to quantify runtime performance, repeated runtime performance, parallel scaling, computational efficiency, and marker-output reproducibility under Windows multisession execution.
 
 The package is intended for method development, performance evaluation,
 and publication-ready reporting of scRNA-seq analyses.
@@ -17,7 +15,10 @@ and publication-ready reporting of scRNA-seq analyses.
 - Reproducible benchmarking with deterministic defaults
 - Explicit handling of Windows multisession parallelism
 - Separation of serial and parallel workflow components
-- CSV- and figure-based outputs suitable for manuscripts
+- CSV and figure-based outputs suitable for manuscripts
+- Repeated benchmarking across configurable worker counts
+- Runtime variability and statistical performance assessment
+- Marker-output reproducibility across repeated executions
 
 Linux and HPC benchmarking are intentionally out of scope.
 
@@ -69,7 +70,7 @@ bench_res <- scbenchr_run_step4(
   seu      = seu,
   assay   = "RNA",
   layer   = "data",
-  workers = c(1, 2, 4, 8),
+  workers = c(1, 2, 4,6 , 8),
   tag     = "example_dataset"
 )
 
@@ -90,7 +91,7 @@ bench_res$markers
 
 - Core pipelines are executed serially for stability
 - Parallelization is evaluated using future::multisession
-- Scaling analysis highlights diminishing returns and memory pressure
+- Scaling analysis quantifies speedup, parallel efficiency, runtime reduction, and diminishing returns
 
 # Citation
 
