@@ -97,8 +97,7 @@ bench_res$markers
 
 If this package is used in academic work, please cite:
 
-Saada, B. scBenchR: System-aware benchmarking of Seurat v5 scRNA-seq
-workflows on Windows systems. Manuscript in preparation.
+Saada, B. et al. System-aware benchmarking of Seurat v5 scRNA-seq workflows: parallel efficiency, marker reproducibility and output reproducibility under Windows multisession execution. Manuscript under review.
 
 # License
 
