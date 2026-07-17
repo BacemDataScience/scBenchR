@@ -26,12 +26,19 @@ Linux and HPC benchmarking are intentionally out of scope.
 
 ``` mermaid
 flowchart TD
-  A[Seurat v5 object] --> B[Quality control]
-  B --> C[Step 3: Serial pipeline]
-  C --> D[Optional RPCA integration]
-  C --> E[Step 4: Marker benchmarking]
-  E --> F[Worker scaling analysis]
-  F --> G[Tables and figures]
+  A[Seurat v5 scRNA-seq objects] --> B[Quality control and preprocessing]
+  B --> C[Clustering and dimensionality reduction]
+  C --> D[RPCA integration for merged dataset]
+  C --> E[RNA-assay marker detection]
+  D --> E
+  E --> F[Worker grid: 1, 2, 4, 6, 8]
+  F --> G[Five repeated executions]
+  G --> H[Runtime and variability analysis]
+  G --> I[Speedup and parallel efficiency]
+  G --> J[Marker-output reproducibility]
+  H --> K[Tables and publication-ready figures]
+  I --> K
+  J --> K
 ```
 
 # Installation
